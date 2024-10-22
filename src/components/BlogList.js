@@ -1,19 +1,14 @@
 import React from "react";
 import BlogPost from "./BlogPost";
 
-const BlogList = ({ title, content, author }) => {
+const BlogList = ({ blogs }) => {
   return (
     <section>
       {blogs.map((blog) => (
-        <BlogPost
-          key={blog}
-          title={title}
-          content={content}
-          author={author.name}
-        />
+        <BlogPost blog={blog} key={blog.id} />
       ))}
     </section>
   );
 };
 
-export default BlogList
+export default BlogList;
