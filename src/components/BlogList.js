@@ -1,13 +1,20 @@
 import React from "react";
-import BlogPost from "./BlogPost";
+
+import { Link } from "react-router-dom";
 
 const BlogList = ({ blogs }) => {
   return (
-    <section>
+    <div>
       {blogs.map((blog) => (
-        <BlogPost blog={blog} key={blog.id} />
+        <div key={blog.id}>
+          <h3>{blog.title}</h3>
+          {/* Pass blog data through the state */}
+          <Link to={`/PostDetails/${blog.id}`} state={{ blog }}>
+            Read More
+          </Link>
+        </div>
       ))}
-    </section>
+    </div>
   );
 };
 
