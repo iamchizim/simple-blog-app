@@ -12,11 +12,11 @@ const Pagination = ({ blogsPerPage, totalBlogs, paginate }) => {
   }
 
   return (
-    <nav>
+    <nav className="pagination">
       {pageNumbers.map((number) => (
-        <button 
+        <button  
           onClick={() => paginate(number)}  // Corrected onClick
-          className="number" 
+          className="pagination" 
           key={number}
         >
           {number}

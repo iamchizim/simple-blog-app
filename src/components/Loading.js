@@ -11,7 +11,7 @@ const LoadingMessage = ({ blogs }) => {
     }
   }, [blogs]);
 
-  return <section>{loadingMessage && <p>{loadingMessage}</p>}</section>;
+  return <section className="loading">{loadingMessage && <p>{loadingMessage}</p>}</section>;
 };
 
 export default LoadingMessage;
